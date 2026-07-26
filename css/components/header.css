@@ -2,7 +2,7 @@
 .header{
     background-color: #ffffff;
     position: fixed;
-    top: 20px;
+    top: 60px;
     left: 50%;
     transform: translate(-50%);
     width: 1260px;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 0.65rem 1.25rem;
 }
 
 .logo img{
@@ -32,17 +32,21 @@
     gap: 2.5rem;
 }
 
-.nav-center a, .nav-right a {
+.nav-center a, 
+.nav-right a {
     font-size: 1.25rem;
+    color: #333333;
 }
 
-.nav-center a:hover, .nav-right a:hover {
+.nav-center a:hover, 
+.nav-right a:hover {
     color: #7c3aed;
 }
 
 .nav-right ul {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-right img {
@@ -50,7 +54,5 @@
 }
 
 .nav-right a:hover img {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    opacity: 0.7;
 }
