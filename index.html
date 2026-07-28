@@ -16,18 +16,22 @@
   <link rel="stylesheet" href="./css/components/header.css">
   <link rel="stylesheet" href="./css/components/hero.css">
   <link rel="stylesheet" href="./css/components/product-card.css">
+  <link rel="stylesheet" href="./css/components/product-grid.css">
 
 </head>
 
 <body>
+  <!-- //////////////////// HEADER /////////////////// -->
   <header class="header">
 
+    <!-- Logo -->
     <h1 class="logo">
       <a href="/" title="SyntaxWear - Tênis e Sneakers Online">
         <img src="./images/logo/Logo.svg" alt="SyntaxWear - Tênis e Sneakers Online">
       </a>
     </h1>
 
+    <!-- Navegação -->
     <div class="nav-container">
       <nav class="nav-center" aria-label="Navegação Principal">
         <ul>
@@ -37,6 +41,7 @@
         </ul>
       </nav>
 
+      <!-- Navegação Secundária -->
       <nav class="nav-right" aria-label="Navegação Secundária">
         <ul>
           <li><a href="#">Nossas lojas</a></li>
@@ -59,11 +64,10 @@
         </ul>
       </nav>
     </div>
-
-
   </header>
 
   <main>
+    <!-- /////////////// HERO SECTION /////////////////// -->
     <section class="hero-section" aria-labelledby="hero-title">
       <div class="hero-overlay">
         <div class="hero-content">
@@ -77,48 +81,59 @@
       </div>
     </section>
 
+    <!-- ///////////////// CATEGORIES //////////// -->
     <section class="categories-section">
-
       <div class="category-card casual-category">
         <a class="category-link" href="">
           <span class="overlay"></span>
           <span class="category-name btn btn-outline">Casual</span>
         </a>
       </div>
+
       <div class="category-card esporte-category">
         <a class="category-link" href="">
           <span class="overlay"></span>
           <span class="category-name btn btn-outline">Esporte</span>
         </a>
       </div>
+
       <div class="category-card moderno-category">
         <a class="category-link" href="">
           <span class="overlay"></span>
           <span class="category-name btn btn-outline">Moderno</span>
         </a>
       </div>
+
       <div class="category-card futurista-category">
         <a class="category-link" href="">
           <span class="overlay"></span>
           <span class="category-name btn btn-outline">Futurista</span>
         </a>
       </div>
-
     </section>
 
-    <section class="featured-products-section" aria-labelledby="products-title">
-      <h2 id="products-title">Featured products</h2>
-      <div class="product-grid"></div>
+    <!-- ///////////////// PRODUCTS GRID ////////////////// -->
+    <section class="grid-section">
+      <div class="grid-card grid-content">
+        <span class="grid-subtitle">Krypton One</span>
+        <h2 class="grid-title">Estilo urbano com atitude</h2>
+        <div class="grid-buttons">
+          <a class="btn btn-outline" href="#">Femenino</a>
+          <a class="btn btn-outline" href="#">Masculino</a>
+        </div>
+      </div>
+
+      <div class="grid-card grid-item1"></div>
+      <div class="grid-card grid-item2"></div>
+      <div class="grid-card grid-item3"></div>
+      <div class="grid-card grid-item4"></div>
+      <div class="grid-card grid-item5"></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="contact-info">
-      <h2>Contact</h2>
-    </div>
-    <div class="footer-links">
-      <h2>Links</h2>
-    </div>
+  <!-- ///////////////// FOOTER ////////////////// -->
+  <footer class="footer">
+   
   </footer>
 </body>
 
