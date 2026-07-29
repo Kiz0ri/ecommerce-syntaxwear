@@ -82,3 +82,16 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 1000px) {
+    .footer-inner {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+}

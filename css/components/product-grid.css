@@ -1,7 +1,8 @@
 /* product-grid.css */
 .grid-section {
     width: 100%;
-    height: 910px;
+    height: auto;
+    min-height: 910px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 300px);
@@ -71,4 +72,34 @@
     background: url(../../images/products/tenis\ futurista\ 2.jpg) no-repeat center;
     background-size: cover;
     grid-area: grid-item5;
+}
+
+
+@media (max-width: 768px) {
+    .grid-section {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: 
+      "grid-content grid-content"
+      "grid-item1 grid-item1"
+      "grid-item3 grid-item4"
+      "grid-item3 grid-item5"
+      "grid-item2 grid-item2";
+      width: 100%;
+      gap: 0.625rem;
+    }
+
+    .grid-content {
+        min-height: 500px;
+    }
+
+    .grid-item1, .grid-item2 {
+        min-height: 190px;
+    }
+
+    .grid-item3 {
+        min-height: 370px;
+    }
+
+
 }
