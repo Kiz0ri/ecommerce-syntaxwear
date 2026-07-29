@@ -1,105 +1,99 @@
 /* product-grid.css */
-.grid-section {
-    width: 100%;
-    height: auto;
-    min-height: 910px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 300px);
-    grid-template-areas:
-        "grid-content grid-content grid-item2 grid-item2"
-        "grid-content grid-content grid-item3 grid-item4"
-        "grid-item1 grid-item1 grid-item3 grid-item5";
-    gap: 30px;
-}
 
-.grid-card {
+.card {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    position: relative;
     border-radius: 20px;
-    overflow: hidden;
 }
 
-.grid-content {
-    background: url(../../images/products/card_imagem.jpg) no-repeat center;
-    background-size: cover;
-    grid-area: grid-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.highlight {
+	grid-area: highlight;
+	background-image: url(../../images/products/card_imagem.jpg);
+}
+.sneaker-purple {
+	grid-area: sneaker-purple;
+	background-image: url(../../images/products/roxo-verde-grid.jpg);
+}
+.model {
+	grid-area: model;
+	background-image: url(../../images/products/modelo-feminino.jpg);
+}
+.sneaker-color {
+	grid-area: sneaker-color;
+	background-image: url(../../images/products/futurista-grid.jpg);
+}
+.sneaker-white {
+	grid-area: sneaker-white;
+	background-image: url(../../images/products/preto-branco-grid.jpg);
+}
+.sneaker-silver {
+	grid-area: sneaker-silver;
+	background-image: url(../../images/products/moderno-grid.jpg);
+}
+.grid-section {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 300px);
+	grid-template-areas:
+		"highlight highlight sneaker-purple sneaker-purple"
+		"highlight highlight model sneaker-color"
+		"sneaker-white sneaker-white model sneaker-silver";
+	gap: 30px;
 }
 
-.grid-subtitle {
+.top1-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-title{
+    color: #EDEDED;
     font-size: 1.25rem;
-    color: #ededed;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
-.grid-title {
+.card-subtitle{
+    color: #EDEDED;
     font-size: 1.5rem;
     font-weight: 400;
-    color: #ededed;
     margin-bottom: 20px;
 }
 
-.grid-buttons .btn {
-    padding: 10px 40px;
-}
-
-.grid-item1 {
-    background: url(../../images/products/tenis\ preto\ azul.jpg) no-repeat center;
-    background-size: cover;
-    grid-area: grid-item1;
-}
-
-.grid-item2 {
-    background: url(../../images/products/tenis\ roxo\ e\ verde.jpg) no-repeat center;
-    background-size: cover;
-    grid-area: grid-item2;
-}
-
-.grid-item3 {
-    background: url(../../images/products/modelo\ mulher.jpg) no-repeat center;
-    background-size: cover;
-    grid-area: grid-item3;
-}
-
-.grid-item4 {
-    background: url(../../images/products/tenis\ colorido\ 2.jpg) no-repeat center;
-    background-size: cover;
-    grid-area: grid-item4;
-}
-
-.grid-item5 {
-    background: url(../../images/products/tenis\ futurista\ 2.jpg) no-repeat center;
-    background-size: cover;
-    grid-area: grid-item5;
+.cta-group{
+    display: flex;
+    gap: 10px;
 }
 
 
-@media (max-width: 768px) {
-    .grid-section {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(5, auto);
-      grid-template-areas: 
-      "grid-content grid-content"
-      "grid-item1 grid-item1"
-      "grid-item3 grid-item4"
-      "grid-item3 grid-item5"
-      "grid-item2 grid-item2";
-      width: 100%;
-      gap: 0.625rem;
-    }
+@media (max-width:768px) {
+	.grid-section{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: 
+		"highlight highlight"
+		"sneaker-white sneaker-white"
+		"model sneaker-color"
+		"model sneaker-silver"
+		"sneaker-purple sneaker-purple";
+		max-width: 100%;
+		gap: 0.625rem;
+	}
 
-    .grid-content {
-        min-height: 500px;
-    }
+	.highlight{
+		min-height: 500px;
+	}
 
-    .grid-item1, .grid-item2 {
-        min-height: 190px;
-    }
+	.model{
+		min-height: 370px;
+	}
 
-    .grid-item3 {
-        min-height: 370px;
-    }
-
-
+	.sneaker-white, .sneaker-purple{
+		min-height: 190px;
+	}
 }
